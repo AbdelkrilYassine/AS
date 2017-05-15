@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mdpf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dd"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:soundEffectsEnabled="true"
+    tools:context="com.example.yassine.as.Mdprofile">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe :" />
+
+        <RadioGroup
+            android:id="@+id/rag1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="130dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/raadio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:buttonTint="#0090ff"></RadioButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/male"
+                android:text="M  "
+                android:textColor="@color/colorPrimaryDark" />
+
+            <RadioButton
+                android:id="@+id/raadio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:buttonTint="#0090ff"></RadioButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/female"
+                android:text="F  "
+                android:textColor="@color/brick" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First name " />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            android:drawableRight="@drawable/namee"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:padding="10dip" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email*        " />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/emails"
+            android:layout_width="170dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:digits="AZERTYUIOOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0.123456789/-/@\"
+            android:background="@drawable/edittext"
+            android:drawableRight="@drawable/email"
+            android:hint="Email"
+            android:maxLines="1"
+            android:padding="10dip" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password*" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/passwordss"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+            android:drawableRight="@drawable/couba"
+            android:hint="Password"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="10dip" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birth date :" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/birthdate"
+            android:layout_width="170dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:drawableRight="@drawable/birthdate"
+            android:focusable="false"
+            android:hint="yyyy/MM/dd"
+            android:maxLines="1"
+            android:padding="10dip" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:paddingLeft="80sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btcancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Cancel"
+            android:textColor="#fff" />
+        <View
+            android:layout_width="80dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btsign"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="OK!"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>
+

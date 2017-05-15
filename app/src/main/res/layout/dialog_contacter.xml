@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/barme"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="fill_parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="-1sp"
+        android:background="@color/white" />
+    <Button
+        android:onClick="btncall"
+        android:id="@+id/btncall"
+        android:drawableLeft="@drawable/call"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:text="Call Organizer"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="60sp"
+        android:background="@color/white" />
+
+
+    <Button
+        android:id="@+id/btnemail"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/mail"
+        android:layout_below="@id/btncall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:width="200dp"
+        android:text="Send mail"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="122sp"
+        android:background="@color/white" />
+
+
+    <Button
+        android:onClick="btnExitClicked"
+        android:id="@+id/btnExit"
+        android:drawableLeft="@drawable/basic"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:text="Exit"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="195sp"
+        android:background="@color/white" />
+</RelativeLayout>

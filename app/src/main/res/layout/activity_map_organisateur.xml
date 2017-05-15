@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_org"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    tools:context=".MapOrganisateur">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mapo"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.yassine.as.MapOrganisateur" />
+
+    <LinearLayout
+        android:id="@+id/slidee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/appel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/iconn4"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <Button
+            android:id="@+id/photoo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/iconn2"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <Button
+            android:id="@+id/infoo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/iconn1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/outt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:background="@drawable/iconn3" />
+
+</FrameLayout>

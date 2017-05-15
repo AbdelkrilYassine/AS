@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/interface1"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="259sp"
+        android:layout_height="27sp"
+        android:layout_marginLeft="68sp"
+        android:layout_marginTop="214sp"
+        android:background="@color/Ed" />
+
+    <EditText
+        android:layout_width="259sp"
+        android:layout_height="27sp"
+        android:layout_marginLeft="68sp"
+        android:layout_marginTop="19sp"
+        android:background="@color/Ed" />
+
+    <LinearLayout
+        android:layout_width="304sp"
+        android:layout_height="15sp"
+        android:layout_marginLeft="26sp"
+        android:layout_marginTop="12sp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="25sp"
+            android:layout_height="15sp"
+            android:layout_marginRight="5sp"
+            android:checked="true"
+            android:theme="@style/MyCheckBox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Tsgin"
+            android:textSize="10sp"
+            android:text="Remember me"
+            android:layout_marginTop="-3sp"
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="85sp"
+            android:layout_height="15sp"
+            android:layout_marginLeft="125sp"
+            android:layout_marginTop="-3sp"
+            android:text="Forget Password?"
+            android:textColor="@color/Tsgin"
+            android:textSize="10sp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="157sp"
+        android:layout_height="29sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12sp"
+        android:background="@color/Blog"
+        android:text="Login"/>
+
+    <Button
+        android:layout_width="37sp"
+        android:layout_height="15sp"
+        android:layout_marginLeft="264sp"
+        android:background="@android:color/transparent" />
+
+
+</LinearLayout>

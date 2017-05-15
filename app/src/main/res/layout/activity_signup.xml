@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qsdfg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/statice"
+        style="@style/edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up for free"
+        android:textSize="20sp" />
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:scaleX="10" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="25dp" />
+
+
+    <TableLayout
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="95dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="6"
+                    android:text="Name :"
+                    android:textColor="@color/Tsgin"
+
+                    />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="160dp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/edittext"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                    android:drawableRight="@drawable/nameis"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="10dip"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="28sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Username :"
+                    android:textColor="@color/Tsgin"></TextView>
+
+                <EditText
+                    android:id="@+id/usernames"
+                    android:layout_width="160sp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/edittext"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789."
+                    android:drawableRight="@drawable/uuu"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="10dip"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="28sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:text="Email :"
+                    android:textColor="@color/Tsgin"></TextView>
+
+                <EditText
+                    android:id="@+id/emails"
+                    android:layout_width="160sp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/edittext"
+                    android:digits="AZERTYUIOOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0.123456789/-/@\"
+                    android:drawableRight="@drawable/mess"
+                    android:hint="Email"
+                    android:maxLines="1"
+                    android:padding="10dip"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="28sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Password :"
+                    android:textColor="@color/Tsgin"></TextView>
+
+                <EditText
+                    android:id="@+id/passwordss"
+                    android:layout_width="160sp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/edittext"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+                    android:drawableRight="@drawable/lok"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="10dip"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="28sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Birthdate :"
+                    android:textColor="@color/Tsgin"></TextView>
+
+                <EditText
+                    android:id="@+id/birthdate"
+                    android:layout_width="160sp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15sp"
+                    android:layout_weight="4"
+                    android:background="@drawable/edittext"
+                    android:digits="0123456789/"
+                    android:drawableRight="@drawable/caake"
+                    android:focusable="false"
+                    android:hint="yyyy/MM/dd"
+                    android:maxLines="1"
+                    android:padding="10dip"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="28sp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <TextView
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Sexe "
+                    android:textColor="@color/Tsgin"
+
+                    />
+
+                <RadioGroup
+                    android:id="@+id/rg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="M"></RadioButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:drawableRight="@drawable/hmale"
+                        android:text="   "
+                        android:textColor="@color/green" />
+
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="F"></RadioButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/hfemale"
+                        android:text="   "
+                        android:textColor="@color/brick" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <!--
+        <Button
+            android:id="@+id/btsign"
+            android:layout_width="157sp"
+            android:layout_height="27sp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/Blog"
+            android:text="Save" />
+
+-->
+        <Button
+            android:id="@+id/btsign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/Blog"
+            android:text="Save" />
+    </RelativeLayout>
+</LinearLayout>

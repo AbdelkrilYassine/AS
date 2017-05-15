@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/interface1"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:soundEffectsEnabled="true"
+    tools:context=".Connexion">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="200dp" />
+
+
+    <EditText
+        android:id="@+id/usr"
+        style="@style/edittext"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@color/Ed"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789."
+        android:drawableLeft="@drawable/useme3"
+        android:hint="  Username"
+        android:maxLines="1"
+        android:textColor="@color/Hint"
+        android:textColorHint="@color/Hint"
+        android:textSize="10sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dp"></View>
+
+
+    <EditText
+        android:id="@+id/pwd"
+        style="@style/edittext"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25sp"
+        android:background="@color/Ed"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        android:drawableLeft="@drawable/passme3"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        android:textColor="@color/Hint"
+        android:textColorHint="@color/Hint"
+        android:textSize="10sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <CheckBox
+            android:id="@+id/ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35sp"
+            android:backgroundTint="#162635"
+            android:checked="true"
+            android:theme="@style/MyCheckBox" />
+
+
+        <TextView
+            style="@style/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/me"
+            android:textColor="@color/Tsgin"
+            android:textSize="10sp"></TextView>
+
+        <View
+            android:layout_width="35dp"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:id="@+id/sig"
+            style="@style/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawableRight="@drawable/shapes"
+            android:onClick="sign"
+            android:text="@string/Sign"
+            android:textColor="@color/Tsgin"
+            android:textSize="10sp"></TextView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="15dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="69dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/login"
+            style="@style/button_text"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text="Login"
+            android:layout_weight="1"
+            android:background="@drawable/logbutton"
+
+            />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="89dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/forg"
+            style="@style/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Forget your password?  Click Here"
+            android:textColor="@color/white"
+            android:textSize="15sp"></TextView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

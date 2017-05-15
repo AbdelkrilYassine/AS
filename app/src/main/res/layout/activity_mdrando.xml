@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_ccconfig_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ff">
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp">
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/location"
+                android:text="Lieu :" />
+
+            <Spinner
+                android:id="@+id/sspinner1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/spin"
+                android:entries="@array/reg"
+                android:spinnerMode="dropdown"></Spinner>
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/nbplace"
+                android:text="Nombre de place : "
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/nnbplace"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/map1"
+                android:digits="0123456789:"
+                android:gravity="center"
+                android:hint="  supérieur à 3"
+                android:textColor="@color/white"
+
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/date"
+                android:text="Date :" />
+
+            <EditText
+                android:id="@+id/ddatte"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/map1"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="  yyyy/MM/dd"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/origin"
+                android:text="Lieu de départ" />
+
+            <EditText
+                android:id="@+id/llieudep"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/map1"
+                android:digits="AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn0123456789 "
+                android:textColor="@color/white"
+                android:textColorHighlight="#7cff88"
+
+                />
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/dest"
+                android:text="Lieu d'arrivée :" />
+
+            <EditText
+                android:id="@+id/llieuarr"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@color/map1"
+                android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:textColor="@color/white"
+
+                />
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/timedep"
+                android:text="Heure de départ :" />
+
+            <EditText
+                android:id="@+id/hhhdep"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@color/map1"
+                android:digits="0123456789:"
+                android:focusable="false"
+                android:hint="  hh:mm"
+                android:textColor="@color/white"
+
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/timearr"
+                android:text="Heure d'arrivée :" />
+
+            <EditText
+                android:id="@+id/hhhrearr"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@color/map1"
+                android:digits="0123456789:"
+                android:focusable="false"
+                android:hint="  hh:mm"
+                android:textColor="@color/white"
+
+                />
+        </TableRow>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/timess"
+                android:text="Durée du parcour" />
+
+            <Spinner
+                android:id="@+id/sspinner4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/spin"
+                android:entries="@array/duree"
+                android:spinnerMode="dropdown"></Spinner>
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/baton"
+                android:text="Distance à parcourir:" />
+
+            <EditText
+                android:id="@+id/dsistparr"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:background="@color/map1"
+                android:digits="0123456789."
+                android:hint="   en km"
+                android:textColor="@color/white" />
+        </TableRow>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/namee"
+                android:text="Nom :" />
+
+            <EditText
+                android:id="@+id/nnomm"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/map1"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/phone"
+                android:text="Telephone :" />
+
+            <EditText
+                android:id="@+id/ttel"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@color/map1"
+                android:digits="+0123456789"
+                android:gravity="center"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/fire"
+                android:text="Difficulté :" />
+
+            <Spinner
+                android:id="@+id/sspinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/spin"
+                android:entries="@array/diff"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"></View>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/mode"
+                android:text="Mode de locomotion :" />
+
+            <Spinner
+                android:id="@+id/sspinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/spin"
+                android:entries="@array/mode"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+        </TableRow>
+    </TableLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/coloredittext"
+            android:text="Reset"></Button>
+
+        <Button
+            android:id="@+id/confiirmm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/coloredittext"
+            android:text="Confirm"></Button>
+    </LinearLayout>
+</RelativeLayout>
+

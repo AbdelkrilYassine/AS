@@ -1,0 +1,157 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/father"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/noir"
+    tools:context=".MapsActivity">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:context=".MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/coloredittext"
+        android:orientation="vertical">
+
+        <com.example.yassine.as.CustomAutoCompleteTextView
+            android:id="@+id/etOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coloredittext"
+            android:digits=",AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn123456789 "
+            android:drawableLeft="@drawable/kk"
+            android:drawableRight="@drawable/searchdoc"
+            android:hint="  Enter origin address"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"></com.example.yassine.as.CustomAutoCompleteTextView>
+
+        <requestFocus />
+
+
+        <com.example.yassine.as.CustomAutoCompleteTextView
+            android:id="@+id/etDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/coloredittext"
+            android:digits=",AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn123456789 "
+            android:drawableLeft="@drawable/spr"
+            android:drawableRight="@drawable/searchbtn"
+            android:paddingTop="10dp"
+            android:hint="  Enter destination address"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+<View
+    android:layout_width="0dp"
+    android:layout_height="20dp"></View>
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFindPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bluue"
+                android:text="Find path" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/carr" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0 km" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:src="@drawable/speed" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0 min" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="505dp"
+
+        >
+
+        <TableRow android:background="@color/bmap">
+
+            <com.example.yassine.as.CustomAutoCompleteTextView
+                android:id="@+id/loc"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:digits=",ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:drawableRight="@drawable/gsearch"
+                android:hint=" Draw your route..." />
+
+            <Button
+                android:id="@+id/searchb"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:background="@color/bluue"
+                android:text="Search"></Button>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="555dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/coloredittext"
+            android:text="Reset"></Button>
+
+        <Button
+            android:id="@+id/confirmm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/coloredittext"
+            android:text="Confirm"></Button>
+    </LinearLayout>
+
+</FrameLayout>

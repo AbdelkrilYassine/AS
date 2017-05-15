@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+
+     <rotate
+         android:duration="3000"
+         android:fromDegrees="0.0"
+         android:pivotX="50%"
+         android:pivotY="50%"
+         android:toDegrees="360"
+         ></rotate>
+
+         -->
+
+    <!--
+
+    <scale android:fromXScale="0.0" android:fromYScale="0.0"
+        android:toXScale="1.0" android:toYScale="1.0"
+        android:duration="700" android:fillBefore="false" />
+    <translate android:fromXDelta="-200" android:fromYDelta="-200"
+        android:duration="700" />
+
+        -->
+    <!--
+
+        <translate android:fromXDelta="0"
+            android:toXDelta="-5%p"
+            android:duration="100"/>
+        <translate android:fromXDelta="-5%p"
+            android:toXDelta="5%p"
+            android:duration="100"
+            android:startOffset="100"/>
+        <translate android:fromXDelta="5%p"
+            android:toXDelta="-5%p"
+            android:duration="200"
+            android:startOffset="200"/>
+
+    -->
+
+    <!-- Tanja7
+        <alpha
+            android:fromAlpha="0.0"
+            android:toAlpha="1.0"
+            android:interpolator="@android:anim/accelerate_interpolator"
+            android:duration="8000"	/>
+            -->
+    <!-- Tanja7 2
+
+        <rotate android:pivotX="50%"
+            android:pivotY="50%"
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:duration="1000"/>
+
+        <rotate android:pivotX="20%"
+            android:pivotY="30%"
+            android:fromDegrees="0"
+            android:toDegrees="360"
+            android:duration="1200"
+            android:startOffset ="1000"/>
+            -->
+
+    <!-- zomini
+
+        <scale xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:duration="3000"
+
+            android:fromXScale="0.5"
+
+            android:fromYScale="0.5"
+
+            android:pivotX="50%"
+
+            android:pivotY="50%"
+
+            android:toXScale="2.5"
+
+            android:toYScale="2.5">
+
+
+        </scale>
+
+
+        <scale xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:duration="3000"
+
+            android:fromXScale="2.5"
+
+            android:fromYScale="2.5"
+
+            android:pivotX="50%"
+
+            android:pivotY="50%"
+
+            android:startOffset="5000"
+
+            android:toXScale="0.5"
+
+            android:toYScale="0.5"></scale>
+
+    -->
+
+    <!-- zomm out
+    <scale
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:duration="5000"
+        android:fromXScale="2.0"
+        android:fromYScale="2.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="0.6"
+        android:toYScale="0.6" >
+    </scale>
+
+-->
+
+    <!-- Blink tech3el w tatfa
+
+    <alpha android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="1000"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"/>
+
+-->
+
+    <translate
+        android:duration="2000"
+        android:fillAfter="true"
+        android:fromXDelta="0%p"
+        android:startOffset="400"
+        android:toXDelta="70%p" />
+    <translate
+        android:duration="2000"
+        android:fillAfter="true"
+        android:fromYDelta="0%p"
+        android:startOffset="1200"
+        android:toYDelta="70%p" />
+    <translate
+        android:duration="2000"
+        android:fillAfter="true"
+        android:fromXDelta="0%p"
+        android:startOffset="2000"
+        android:toXDelta="-70%p" />
+    <translate
+        android:duration="2000"
+        android:fillAfter="true"
+        android:fromYDelta="0%p"
+        android:startOffset="2800"
+        android:toYDelta="-70%p" />
+
+    <!-- Rotate 360 degrees animation-->
+    <rotate
+        android:duration="3000"
+        android:fromDegrees="0"
+        android:interpolator="@android:anim/cycle_interpolator"
+        android:pivotX="40%"
+        android:pivotY="40%"
+        android:repeatCount="infinite"
+        android:repeatMode="restart"
+        android:startOffset="3900"
+        android:toDegrees="360" />
+
+</set>

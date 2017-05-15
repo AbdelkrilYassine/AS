@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/interface1"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="259sp"
+        android:layout_height="27sp"
+        android:layout_marginLeft="68sp"
+        android:layout_marginTop="2153sp"
+        android:background="@android:color/transparent" />
+
+    <EditText
+        android:layout_width="259sp"
+        android:layout_height="28sp"
+        android:layout_marginLeft="68sp"
+        android:layout_marginTop="18sp"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:layout_width="304sp"
+        android:layout_height="15sp"
+        android:layout_marginLeft="26sp"
+        android:layout_marginTop="12sp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="25sp"
+            android:layout_height="15sp"
+            android:layout_marginRight="5sp"
+            android:checked="true"
+            android:theme="@style/MyCheckBox" />
+
+        <Button
+            android:layout_width="85sp"
+            android:layout_height="15sp"
+            android:layout_marginLeft="188sp"
+            android:background="@android:color/transparent" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="157sp"
+        android:layout_height="10sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28sp"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:layout_width="37sp"
+        android:layout_height="15sp"
+        android:layout_marginLeft="264sp"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:layout_width="84sp"
+        android:layout_height="39sp"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="99sp"
+        />
+</LinearLayout>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jk72"
+    android:orientation="vertical">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        >
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Date :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/datee"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+
+                />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Lieu :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/lieu"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Nombre de participant :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/nbb"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Lieu de départ :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/ldep"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Lieu d'arrivé :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/larr"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Heure de départ :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/hdep"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Heure d'arrivé :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/harr"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Durée du parcour :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/duree"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Distance à parcourir :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/distance"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Nom de la randonnée :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/nomr"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Organisateur telephone :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/teul"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Difficulté du circuit :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/difficulte"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:background="@color/blue"
+            android:padding="5dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Mode de locomotion :"
+                android:textColor="@color/bg" />
+
+            <TextView
+                android:id="@+id/mode"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
+
+
+
+
+
+

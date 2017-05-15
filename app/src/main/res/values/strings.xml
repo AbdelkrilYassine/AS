@@ -1,0 +1,90 @@
+<resources>
+
+    <string name="title_activity_map_offline">Map</string>
+    <string name="title_activity_map_organisateur">Map</string>
+    <string name="app_name">Randon-ili</string>
+    <string name="Sign"><u><b>Don\'t have account yet?     </b></u></string>
+    <string name="me"><u><b>Remember me</b></u></string>
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Hiker!</string>
+    <string name="slide_1_desc">The easiest way to participate in hiking trip from your mobile device!</string>
+
+    <string name="slide_2_title">Own Trips</string>
+    <string name="slide_2_desc">Opportunity to organize your hiking Trip!</string>
+
+    <string name="slide_3_title">Great Adventure</string>
+    <string name="slide_3_desc">Best day hikes it guide you to the outdoors Adventure!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book a place and explore the world!</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="num">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="reg">
+        <item>Ariana</item>
+        <item>Béja</item>
+        <item>Ben Arous</item>
+        <item>Bizerte</item>
+        <item>Gabés</item>
+        <item>Gafsa</item>
+        <item>Jendouba</item>
+        <item>Kairouan</item>
+        <item>Kasserine</item>
+        <item>Kébili</item>
+        <item>Le Kef</item>
+        <item>Mahdia</item>
+        <item>La Manouba</item>
+        <item>Médenine</item>
+        <item>Monastir</item>
+        <item>Nabeul</item>
+        <item>Sfax</item>
+        <item>Sidi Bouzid</item>
+        <item>Siliana</item>
+        <item>Sousse</item>
+        <item>Tataouine</item>
+        <item>Tozeur</item>
+        <item>Tunis</item>
+        <item>Zaghouan</item>
+    </string-array>
+    <string name="gouv">Choisir une Gouvernorat</string>
+
+    <string-array name="diff">
+        <item>Facile</item>
+        <item>Moyenne</item>
+        <item>Difficile</item>
+        <item>Trés difficile</item>
+        <item>Extrémement difficile</item>
+    </string-array>
+
+    <string-array name="mode">
+        <item>A pied</item>
+        <item>A VTT</item>
+        <item>Cyclo-route</item>
+        <item>A ski</item>
+        <item>En raquettes à neige</item>
+        <item>A cheval</item>
+        <item>En barque,canoé,kayak,quad</item>
+
+    </string-array>
+
+    <string-array name="duree">
+        <item>Moins de 2h</item>
+        <item>Entre 2h et 3h</item>
+        <item>Entre 3h et 4h</item>
+        <item>Entre 4h et 5h</item>
+        <item>Entre 5h et 7h</item>
+        <item>Plus de 7h</item>
+    </string-array>
+
+</resources>
