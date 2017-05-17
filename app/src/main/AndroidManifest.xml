@@ -36,8 +36,8 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/launchh"
-        android:label="AS"
+        android:icon="@drawable/iconoff"
+        android:label="Randon-iLi"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -63,11 +63,7 @@
         <activity
             android:name=".Connexion"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Signup"
@@ -86,14 +82,20 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".WelcomeActivity"
+
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Logo"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MapsActivity"
-            android:label="Map"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ListOrganiser"
@@ -107,11 +109,21 @@
         <activity
             android:name=".Makeit"
             android:screenOrientation="portrait" />
-        <activity android:name=".Mdprofile" />
-        <activity android:name=".Mdrando" />
-        <activity android:name=".ConsultRandoPart" />
-        <activity android:name=".Imhere" />
-        <activity android:name=".ModifyTrajet"></activity>
+        <activity
+            android:name=".Mdprofile"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Mdrando"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ConsultRandoPart"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Imhere"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ModifyTrajet"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

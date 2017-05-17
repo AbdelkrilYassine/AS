@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/boom"
-    android:orientation="vertical"
-    android:weightSum="10"
-    >
+    android:orientation="vertical">
+
+
 
     <ListView
         android:id="@+id/lhere"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="9"
+        android:layout_height="470sp"
         ></ListView>
-
-    <LinearLayout
+    <Button
+        android:layout_below="@+id/lhere"
+        android:id="@+id/continueR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:background="@color/Blog"
+        android:text="Continue Rando" />
 
-        <Button
-            android:id="@+id/continueR"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/Blog"
-            android:text="Continue Rando" />
+    <Button
+        android:id="@+id/cancelr"
+        android:layout_below="@+id/continueR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Blog"
+        android:text="Cancel Rando" />
 
-        <Button
-            android:id="@+id/cancelr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/Blog"
-            android:text="Cancel Rando" />
-    </LinearLayout>
-
-
-</LinearLayout>
+</RelativeLayout>

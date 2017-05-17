@@ -21,6 +21,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -57,13 +58,13 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     EditText usr, pwd;
     Button log;
     ImageView iv;
-    TextView sig, forget;
+    TextView sig, forget, rem;
     Boolean test;
     CheckBox ck;
-    public static String filename = "Rando";
+    public static String filename = "loginPrefs";
     SharedPreferences SP;
     int counter = 3;
-    String userName,password;
+    String userName, password;
 
 
     @Override
@@ -77,6 +78,28 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         sig = (TextView) findViewById(R.id.sig);
         ck = (CheckBox) findViewById(R.id.ck);
         forget = (TextView) findViewById(R.id.forg);
+        rem = (TextView) findViewById(R.id.rem);
+
+
+        SP = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+
+        if (SP.contains("key1") && SP.contains("key2")) {
+            String getname = SP.getString("key1", null);
+            String getpass = SP.getString("key2", null);
+            usr.setText(getname);
+            pwd.setText(getpass);
+        }
+        if (SP.contains("key3")) {
+            String ch = SP.getString("key3", null);
+            if (ch.equals("0")) {
+                ck.setChecked(false);
+                usr.getText().clear();
+                pwd.getText().clear();
+            } else {
+                ck.setChecked(true);
+            }
+        }
 
 
         //iv = (ImageView) findViewById(R.id.iv);
@@ -85,6 +108,16 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         log.setOnClickListener(this);
         sig.setOnClickListener(this);
         forget.setOnClickListener(this);
+        rem.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MediaPlayer mp = MediaPlayer.create(Connexion.this, R.raw.pipe);
+                mp.start();
+                if (!ck.isChecked()) {
+                    ck.setChecked(true);
+                } else {
+                    ck.setChecked(false);
+                }            }
+        });
 
 
         usr.setOnKeyListener(this);
@@ -113,58 +146,35 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
 
 */
 
-
-        SP = getSharedPreferences(filename, 0);
-        String getname = SP.getString("key1",null);
-        String getpass = SP.getString("key2",null);
-        usr.setText(getname);
-        pwd.setText(getpass);
+        //  SP = getSharedPreferences(filename, Context.MODE_PRIVATE);
 
 
+/////////////////////////////////////////////////////////////
 
 
         if (ContextCompat.checkSelfPermission(Connexion.this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(Connexion.this, new String[]{Manifest.permission.INTERNET}, 6);
         }
 
-       if( isNetworkOnline(this))
-       {
-           Context context = getApplicationContext();
-           CharSequence text = "Internet is available";
-           int duration = Toast.LENGTH_SHORT;
+        if (isNetworkOnline(this)) {
+            Context context = getApplicationContext();
+            CharSequence text = "Internet is available";
+            int duration = Toast.LENGTH_SHORT;
 
-           Toast toast = Toast.makeText(context, text, duration);
-           toast.show();
-           log.setBackgroundColor(getResources().getColor(R.color.orangie));
-       }
-       else
-       {
-           Context context = getApplicationContext();
-           CharSequence text = "Please activate the internet";
-           int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            log.setBackgroundColor(getResources().getColor(R.color.orangie));
+        } else {
+            Context context = getApplicationContext();
+            CharSequence text = "Please activate the internet";
+            int duration = Toast.LENGTH_SHORT;
 
-           Toast toast = Toast.makeText(context, text, duration);
-           toast.show();
-       }
-
-
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
 
 
     }
-
-
-
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-
-        return true;
-
-     }
-
-*/
 
 
     @Override
@@ -172,6 +182,8 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
 
 
         switch (v.getId()) {
+
+
 
             case R.id.forg:
                 MediaPlayer mprp = MediaPlayer.create(Connexion.this, R.raw.esound);
@@ -263,8 +275,8 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
 
             case R.id.login:
 
-                MediaPlayer mp = MediaPlayer.create(this, R.raw.soundmenu);
-                mp.start();
+                MediaPlayer msp = MediaPlayer.create(this, R.raw.soundmenu);
+                msp.start();
 
                 Context context1 = getApplicationContext();
                 String userName = usr.getText().toString();
@@ -307,22 +319,6 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
                 }
 
 
-
-
-                if(ck.isChecked()) {
-
-
-                    SharedPreferences.Editor editit = SP.edit();
-                    editit.putString("key1", userName);
-                    editit.putString("key2", password);
-                    editit.commit();
-                }else
-                {
-                    usr.getText().clear();
-                        pwd.getText().clear();
-                }
-
-
         }
     }
 
@@ -346,23 +342,41 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     public void onSigninSuccess() {
 
 
-
-     //   Toast.makeText(getApplicationContext(), "Congrats: Sign In Successfull", Toast.LENGTH_LONG).show();
+        //   Toast.makeText(getApplicationContext(), "Congrats: Sign In Successfull", Toast.LENGTH_LONG).show();
+        SharedPreferences.Editor editit = SP.edit();
 
         log.setEnabled(true);
+        if (ck.isChecked()) {
 
-    //    Intent main = new Intent(Connexion.this, TabWidget.class);
+            editit.clear();
+            editit.putString("key1", userName);
+            editit.putString("key2", password);
+            editit.putString("key3", "1");
+
+            editit.commit();
+        } else {
+            editit.clear();
+            editit.putString("key3", "0");
+            editit.commit();
+            editit.remove("key1");
+            editit.apply();
+            editit.remove("key2");
+            editit.apply();
+        }
+        //    Intent main = new Intent(Connexion.this, TabWidget.class);
         // main.putExtra("usr", userName);
-     //   Bundle b = new Bundle();
-      //  b.putString("username", userName);
-      //  b.putString("password", password);
-     //   String type = "login";
+        //   Bundle b = new Bundle();
+        //  b.putString("username", userName);
+        //  b.putString("password", password);
+        //   String type = "login";
 
-     //   main.putExtras(b);
+        //   main.putExtras(b);
         //  BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         //   backgroundWorker.execute(type, userName, password);
 
-       // startActivity(main);
+        // startActivity(main);
+
+
         BackGround b = new BackGround(Connexion.this);
         b.execute(userName, password);
 
@@ -479,14 +493,12 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     }
 
 
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == 1) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //start audio recording or whatever you planned to do
-            }else if (grantResults[0] == PackageManager.PERMISSION_DENIED){
+            } else if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(Connexion.this, Manifest.permission.INTERNET)) {
                     //Show an explanation to the user *asynchronously*
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -497,8 +509,8 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
                             ActivityCompat.requestPermissions(Connexion.this, new String[]{Manifest.permission.INTERNET}, 1);
                         }
                     });
-                    ActivityCompat.requestPermissions(Connexion.this, new String[]{Manifest.permission.INTERNET},1);
-                }else{
+                    ActivityCompat.requestPermissions(Connexion.this, new String[]{Manifest.permission.INTERNET}, 1);
+                } else {
                     //Never ask again and handle your app without permission.
                 }
             }
@@ -506,12 +518,9 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     }
 
 
-
-    public static boolean isNetworkOnline(Context con)
-    {
+    public static boolean isNetworkOnline(Context con) {
         boolean status = false;
-        try
-        {
+        try {
             ConnectivityManager cm = (ConnectivityManager) con
                     .getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo netInfo = cm.getNetworkInfo(0);

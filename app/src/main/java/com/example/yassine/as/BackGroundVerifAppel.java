@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.view.Gravity;
@@ -29,8 +30,11 @@ class BackGroundVerifAppel extends AsyncTask<String, String, String> {
     String nom, code;
 
 
+
+
     public BackGroundVerifAppel(Context cx) {
         this.cx = cx;
+
     }
 
 

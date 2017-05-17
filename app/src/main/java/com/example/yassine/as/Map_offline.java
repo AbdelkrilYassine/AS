@@ -107,7 +107,7 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
     private Uri mCapturedImageURI;
     private static final int RESULT_LOAD_IMAGE = 6;
     private static final int REQUEST_IMAGE_CAPTURE = 2;
-    String nameme, codeme, namep;
+    String nameme, codeme, namep,Dest;
     String empo;
     double latitude, longitude;
     String distanceorg, durationorg;
@@ -118,6 +118,8 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
     int i = 0;
     Bitmap imageBitmap;
     private int PICK_IMAGE_REQUEST = 1;
+    private ArrayList<MarkerOptions> placefavo = new ArrayList<>();
+    int countme=0;
 
 
     @Override
@@ -261,6 +263,11 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
                         d.execute(nameme, codeme, removeChar(latLng.toString()), distanceorg); //Float.toString(distanceInMeters)
 
 
+                        if (!placefavo.isEmpty()) {
+                            for (int s = 0; s < placefavo.size(); s++) {
+                                mMap.addMarker(placefavo.get(s));
+                            }
+                        }
                         // Toast.makeText(Map_offline.this, String.valueOf(distanceInMeters) + " Meter", Toast.LENGTH_SHORT).show();
                         //    Toast.makeText(Map_offline.this, String.valueOf(distFrom(latitude, longitude, arg0.getLatitude(), arg0.getLongitude())) + " Meter", Toast.LENGTH_SHORT).show();
 
@@ -303,6 +310,20 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
 
                 // Start downloading json data from Google Directions API
                 downloadTask.execute(url);
+
+                String[] latLng2 = Dest.split(",");
+
+                double latitude2 = Double.parseDouble(latLng2[0]);
+                double longitude2 = Double.parseDouble(latLng2[1]);
+                LatLng locationy2 = new LatLng(latitude2, longitude2);
+
+                mMap.addMarker(new MarkerOptions().position(locationy2).title("Destination Address"));
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(locationy2));
+
+                addLines(locationy2);
+                new Donwloadertm(Map_offline.this, "http://api2.randon.ili-studios.tn/affichetrajetm.php?code=" + codeme, mMap, arrayPoints).execute();
+
+
                 break;
             case R.id.photo:
                 if (checkPermissions()) {
@@ -336,12 +357,13 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onMapLongClick(LatLng latLng) {
+        countme++;
 
         Drawable circleDrawable = getResources().getDrawable(R.drawable.srr);
         BitmapDescriptor markerIcon = getMarkerIconFromDrawable(circleDrawable);
 
         MarkerOptions markerOptions =
-                new MarkerOptions().position(latLng).title("Favorite Place!").icon(markerIcon);
+                new MarkerOptions().position(latLng).title("Favorite Place! "+countme).icon(markerIcon);
         markerOptions.draggable(true);
 
         mMap.addMarker(markerOptions);
@@ -639,6 +661,7 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
                 JSONObject root = new JSONObject(s);
                 JSONObject user_data = root.getJSONObject("user_data");
                 Codes = user_data.getString("Code");
+                Dest = user_data.getString("Dest");
 
 
             } catch (JSONException e) {
@@ -1301,4 +1324,13 @@ public class Map_offline extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 
+    private void addLines(LatLng latLng) {
+
+        polylineOptions = new PolylineOptions();
+        polylineOptions.color(Color.CYAN);
+        polylineOptions.width(10);
+        arrayPoints.add(latLng);
+        polylineOptions.addAll(arrayPoints);
+        mMap.addPolyline(polylineOptions);
+    }
 }

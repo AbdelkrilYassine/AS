@@ -7,8 +7,10 @@ package com.example.yassine.as;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -69,9 +71,15 @@ class BackGroundLogout extends AsyncTask<String, String, String> {
         progressDialog.dismiss();
 
         if (s.contentEquals("Disconnected!")) {
+
             Intent intent = new Intent(cx, Connexion.class);
             cx.startActivity(intent);
+         /*   SharedPreferences preferences = cx.getSharedPreferences("loginPrefs",Context.MODE_PRIVATE);
+            preferences.edit().remove("key1").commit();
+            preferences.edit().remove("key2").commit(); */
+
             Toast.makeText(cx, "Disconnected!", Toast.LENGTH_LONG).show();
+
 
         } else {
             Toast.makeText(cx, s, Toast.LENGTH_LONG).show();

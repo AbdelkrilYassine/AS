@@ -200,17 +200,8 @@ public class Participate extends AppCompatActivity implements View.OnClickListen
                 if (codehim!=null)
                 {
 
-
-
-                    h.postDelayed(new Runnable() {
-                        public void run() {
                             BackGroundVerifAppel ey = new BackGroundVerifAppel(Participate.this);
                             ey.execute(usernames,codehim);
-                            runnable = this;
-
-                            h.postDelayed(runnable, delay);
-                        }
-                    }, delay);
 
                 }
 

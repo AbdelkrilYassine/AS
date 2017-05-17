@@ -44,6 +44,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -64,6 +65,7 @@ import android.widget.PopupWindow;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -82,6 +84,7 @@ import java.util.Map;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
 
+import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -105,6 +108,7 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
     private static final int RESULT_LOAD_IMAGE = 1;
     private static final int REQUEST_IMAGE_CAPTURE = 2;
     String usernames, passwords;
+    SharedPreferences SP;
     String USERNAME, PASSWORD, EMAIL, NAME;
 
 
@@ -160,6 +164,13 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
         // Attach the adapter to a ListView
         // listView = (ListView) findViewById(R.id.main_list_view);
         //  listView.setAdapter(imageAdapter);
+     /*   SP = getSharedPreferences("im", Context.MODE_PRIVATE);
+        String geti = SP.getString("i",null);
+        if(geti!=null)
+        {img.setImageBitmap(StringToBitMap(geti));}*/
+
+
+
 
 
     }
@@ -491,6 +502,9 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
             Bitmap mphoto = (Bitmap) data.getExtras().get("data");
+
+          /*  SharedPreferences.Editor editit = SP.edit();
+            editit.putString("i", getEncoded64ImageStringFromBitmap(mphoto));*/
             img.setImageBitmap(mphoto);
 
         }
@@ -522,6 +536,8 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+           /* SharedPreferences.Editor editit = SP.edit();
+            editit.putString("i", getEncoded64ImageStringFromBitmap(bmp));*/
             img.setImageBitmap(bmp);
 
         }
@@ -625,5 +641,22 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+    public String getEncoded64ImageStringFromBitmap(Bitmap bitmap) {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] byteFormat = stream.toByteArray();
+        String imgString = Base64.encodeToString(byteFormat, Base64.NO_WRAP);
+        return imgString;
+    }
 
-}
+    public Bitmap StringToBitMap(String encodedString){
+        try{
+            byte [] encodeByte=Base64.decode(encodedString,Base64.DEFAULT);
+            Bitmap bitmap=BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            return bitmap;
+        }catch(Exception e){
+            e.getMessage();
+            return null;
+        }
+    }
+    }
